@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Greeting card</title>
+    </head>
+    <body>
+        <h1>Cilck the below button</h1>
+        <button onclick="myFunction()">Click Me!</button>
+        <p id="hour"></p>
+        <p id="greet"></p>
+        <script>
+            function myFunction(){
+                var Greeting;
+                var time=new Date().getHours();
+
+                if (time < 10){
+                    Greeting="Good morning";
+                }
+                 else if (time < 20){
+                    Greeting="Good afternoon";
+                }
+                  else{
+                    Greeting="Good evening";
+                }
+                document.getElementById("hour").innerHTML="Current hour is:"
+                +time;
+                document.getElementById("greet").innerHTML=Greeting;
+            }
+        </script>
+    </body>
+</html>
